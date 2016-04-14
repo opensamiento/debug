@@ -13,8 +13,25 @@ class BTreeNode
 		BTreeNode *Lchild;  //r or R
 		BTreeNode *Rchild;  //y or Y
 };
+/***************************************************************************************************************
+            Testing class: functions used to see if tree is properly being implemented/created
+****************************************************************************************************************/
+class Testbug
+{
+    public:
+        bool TreeTest (BTree* );
+        bool TreeSearch (BTree* );
+};
 
+bool Testbug::TreeTest(BTree* )
+{
 
+}
+
+bool Testbug::TreeSearch(BTree* )
+{
+
+}
 /******************************************** CLASSES ADDED *****************************************************/
 /************************************************************************************************
 / Class BTree. Left Child will be to R/r nodes. Right Child will be to Y/y nodes.
