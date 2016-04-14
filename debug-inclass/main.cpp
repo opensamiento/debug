@@ -19,13 +19,20 @@ class BTreeNode
 class Testbug
 {
     public:
-        bool TreeTest (BTree* );
-        bool TreeSearch (BTree* );
+        bool TreeTest (BTree* A); //tree set up properly?
+        bool TreeSearch (BTree* B); //correct search of tree?
 };
 
-bool Testbug::TreeTest(BTree* )
+bool Testbug::TreeTest(BTree* A)
 {
-
+    BTreeNode* Temp = A->Root;
+    while (Temp!=NULL)
+    {
+        if (A->add_node(Temp, 'r')) //check to see if node can be added to first level (where both L&R spots should be occupied)
+            return true;
+        else
+            return false;
+    }
 }
 
 bool Testbug::TreeSearch(BTree* )
@@ -147,6 +154,11 @@ int main()
 
     /** TEST 1 -- IS THE TREE CORRECTLY SET UP AND POPULATED **/
 
+    cout << "Tree test, let's see if we can add a third node to the BTree \n";
+    if (Testbug.TreeTest(b)==true)
+        cout << "Problem with tree node implementation! \n";
+    else
+        cout << "No issues with tree node implementation! \n";
 
     vector<string> reads;
     char * reads_file_name="input2.txt";       //make certain to place this file in the correct folder. Do not change path.
