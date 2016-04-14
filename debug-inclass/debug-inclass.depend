@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1460486851 source:c:\users\opens\documents\github\debug\debug-inclass\main.cpp
+	<iostream>
+	<stack>
+	<fstream>
+	<vector>
+	<cstring>
+
